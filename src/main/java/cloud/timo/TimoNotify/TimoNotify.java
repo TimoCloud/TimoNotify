@@ -1,6 +1,5 @@
 package cloud.timo.TimoNotify;
 
-import cloud.timo.TimoCloud.api.TimoCloudAPI;
 import cloud.timo.TimoNotify.listeners.ServerRegisterListener;
 import cloud.timo.TimoNotify.listeners.ServerUnregisterListener;
 import cloud.timo.TimoNotify.managers.FileManager;
@@ -32,8 +31,8 @@ public class TimoNotify extends Plugin {
     }
 
     private void registerListener() {
-        TimoCloudAPI.getEventImplementation().registerListener(new ServerRegisterListener());
-        TimoCloudAPI.getEventImplementation().registerListener(new ServerUnregisterListener());
+        new ServerRegisterListener();
+        new ServerUnregisterListener();
     }
 
     public FileManager getFileManager() {

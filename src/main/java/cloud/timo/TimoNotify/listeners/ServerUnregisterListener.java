@@ -1,17 +1,23 @@
 package cloud.timo.TimoNotify.listeners;
 
+import cloud.timo.TimoCloud.api.TimoCloudAPI;
 import cloud.timo.TimoCloud.api.events.EventHandler;
 import cloud.timo.TimoCloud.api.events.Listener;
 import cloud.timo.TimoCloud.api.events.ServerUnregisterEvent;
 import cloud.timo.TimoNotify.TimoNotify;
 import cloud.timo.TimoNotify.managers.MessageManager;
 import net.md_5.bungee.api.ChatColor;
+import net.md_5.bungee.api.ProxyServer;
 
 public class ServerUnregisterListener implements Listener {
 
+    public ServerUnregisterListener(){
+        TimoCloudAPI.getEventImplementation().registerListener(this);
+    }
+
     @EventHandler
     public void onServerUnregister(ServerUnregisterEvent event) {
-        MessageManager.sendTeamMessage(ChatColor.translateAlternateColorCodes('&', TimoNotify.getInstance().getFileManager().getMessages().getString("serverUnregisterMessage")
+        ProxyServer.getInstance().getPlayers().forEach(proxiedPlayer -> MessageManager.sendMessageTeam(proxiedPlayer, ChatColor.translateAlternateColorCodes('&', TimoNotify.getInstance().getFileManager().getMessages().getString("serverUnregisterMessage")
                 .replace("{serverName}", event.getServerObject().getName())
                 .replace("{serverBase}", event.getServerObject().getBase())
                 .replace("{serverExtra}", event.getServerObject().getExtra())
@@ -24,6 +30,6 @@ public class ServerUnregisterListener implements Listener {
                 .replace("{serverOnlinePlayers}", event.getServerObject().getOnlinePlayers() + "")
                 .replace("{serverPort}", event.getServerObject().getPort() + "")
                 .replace("{serverSocketAddress}", event.getServerObject().getSocketAddress() + "")
-        ));
+        )));
     }
 }
