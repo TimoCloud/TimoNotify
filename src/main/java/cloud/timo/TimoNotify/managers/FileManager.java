@@ -54,7 +54,7 @@ public class FileManager {
             ConfigurationProvider.getProvider(YamlConfiguration.class).save(messagesNew, messagesFile);
             messages = ConfigurationProvider.getProvider(YamlConfiguration.class).load(messagesFile);
         } catch (Exception e) {
-            TimoNotify.getInstance().log("Exception while initializing files:");
+            TimoNotify.getInstance().getLogger().severe("Exception while initializing files:");
             e.printStackTrace();
         }
     }

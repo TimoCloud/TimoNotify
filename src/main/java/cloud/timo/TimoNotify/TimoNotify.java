@@ -1,5 +1,6 @@
 package cloud.timo.TimoNotify;
 
+import cloud.timo.TimoCloud.api.TimoCloudAPI;
 import cloud.timo.TimoNotify.listeners.ServerRegisterListener;
 import cloud.timo.TimoNotify.listeners.ServerUnregisterListener;
 import cloud.timo.TimoNotify.managers.FileManager;
@@ -9,15 +10,11 @@ public class TimoNotify extends Plugin {
     private static TimoNotify instance;
     private FileManager fileManager;
 
-    public void log(String message) {
-        this.getLogger().info("[TimoNotify] " + message);
-    }
-
     @Override
     public void onEnable() {
         registerListener();
         makeInstances();
-        log("has been enabled.");
+        this.getLogger().info("TimoNotify has been enabled.");
     }
 
     private void makeInstances() {
@@ -27,7 +24,7 @@ public class TimoNotify extends Plugin {
 
     @Override
     public void onDisable() {
-        log("has been disabled.");
+        this.getLogger().info("TimoNotify has been disabled.");
     }
 
     private void registerListener() {
