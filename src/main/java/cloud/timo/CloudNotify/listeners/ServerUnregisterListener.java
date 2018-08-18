@@ -16,6 +16,7 @@ public class ServerUnregisterListener implements Listener {
     @EventHandler
     public void onServerUnregister(ServerUnregisterEvent event) {
         CloudNotify.getInstance().getHelper().notify(NotifyType.UNREGISTER, event.getServerObject());
+        //
     }
 
 }
