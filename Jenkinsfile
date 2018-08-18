@@ -16,7 +16,7 @@ pipeline {
 	    	steps {
 	        	echo 'Building..'
 	        	sh 'mvn clean install'
-	        	archiveArtifacts artifacts: 'CloudNotify/target/CloudNotify.jar', fingerprint: true
+	        	archiveArtifacts artifacts: 'target/CloudNotify.jar', fingerprint: true
 	    	}
 
 	    }
