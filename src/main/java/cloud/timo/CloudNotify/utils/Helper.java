@@ -17,7 +17,7 @@ public class Helper {
             mainMessage = CloudNotify.getInstance().getFileManager().getMessages().getString("serverUnregisterMessage");
         String onlinePlayers = "";
         for (PlayerObject onlinePlayer : serverObject.getOnlinePlayers()) {
-            onlinePlayers = onlinePlayer.getName() + ", ";
+            onlinePlayers = onlinePlayers + onlinePlayer.getName() + ", ";
         }
         MessageManager.sendMessageToTeam(ChatColor.translateAlternateColorCodes('&', mainMessage
                 .replace("{serverName}", serverObject.getName())
