@@ -1,5 +1,5 @@
-name: TimoNotify
+name: CloudNotify
 authors: [Lasergott]
-version: 1.0-SNAPSHOT
-main: cloud.timo.TimoNotify.TimoNotify
+version: 2.0-SNAPSHOT
+main: cloud.timo.CloudNotify.CloudNotify
 depends: [TimoCloud]

@@ -1,6 +1,6 @@
-package cloud.timo.TimoNotify.managers;
+package cloud.timo.CloudNotify.managers;
 
-import cloud.timo.TimoNotify.TimoNotify;
+import cloud.timo.CloudNotify.CloudNotify;
 import net.md_5.bungee.config.Configuration;
 import net.md_5.bungee.config.ConfigurationProvider;
 import net.md_5.bungee.config.YamlConfiguration;
@@ -9,7 +9,7 @@ import java.io.File;
 import java.nio.file.Files;
 
 public class FileManager {
-    private String pluginsDirectory = "plugins/TimoNotify/";
+    private String pluginsDirectory = "plugins/CloudNotify/";
     private String configsDirectory = pluginsDirectory + "bungeecord/";
     private File configFile;
     private Configuration config;
@@ -54,7 +54,7 @@ public class FileManager {
             ConfigurationProvider.getProvider(YamlConfiguration.class).save(messagesNew, messagesFile);
             messages = ConfigurationProvider.getProvider(YamlConfiguration.class).load(messagesFile);
         } catch (Exception e) {
-            TimoNotify.getInstance().getLogger().severe("Exception while initializing files:");
+            CloudNotify.getInstance().getLogger().severe("Exception while initializing files:");
             e.printStackTrace();
         }
     }
