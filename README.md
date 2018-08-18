@@ -1,4 +1,4 @@
-[![Build Status](https://jenkins.craftmal.de/job/CloudNotify/job/master/badge/icon)](https://jenkins.craftmal.de/job/CloudNotify/job/master/) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/b341b86dc4704d59b54f059d0cf6d5d1)]
+[![Build Status](https://jenkins.craftmal.de/job/CloudNotify/job/master/badge/icon)](https://jenkins.craftmal.de/job/CloudNotify/job/master/)
 # CloudNotify
 CloudNotify is an extension of the TimoCloud system. The CloudNotify BungeeCord plugin sends a message to all players with a certain permission when a server starts or stops.
  
