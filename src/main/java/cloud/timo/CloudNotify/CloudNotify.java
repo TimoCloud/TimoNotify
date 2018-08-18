@@ -18,6 +18,7 @@ public class CloudNotify extends Plugin {
         registerListener();
         makeInstances();
         this.getLogger().info("CloudNotify has been enabled.");
+        //test
     }
 
     private void makeInstances() {
