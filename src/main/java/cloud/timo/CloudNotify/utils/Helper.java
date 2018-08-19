@@ -29,9 +29,9 @@ public class Helper {
                 .replace("{serverIpAddress}", serverObject.getIpAddress() + "")
                 .replace("{serverMaxPlayerCount}", serverObject.getMaxPlayerCount() + "")
                 .replace("{serverOnlinePlayerCount}", serverObject.getOnlinePlayerCount() + "")
-                .replace("{serverOnlinePlayers}", onlinePlayers.trim().substring(0, onlinePlayers.length() - 1))
+                .replace("{serverOnlinePlayers}", (onlinePlayers.length() == 0 ? "§cNobody is online." : onlinePlayers.trim().substring(0, onlinePlayers.length() - 1)))
                 .replace("{serverPort}", serverObject.getPort() + "")
                 .replace("{serverSocketAddress}", serverObject.getSocketAddress().toString())));
     }
-    
+
 }
