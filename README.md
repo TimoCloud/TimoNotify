@@ -4,7 +4,7 @@ CloudNotify is an extension of the TimoCloud system. The CloudNotify BungeeCord 
  ## Download
  You can download the latest version [here](https://jenkins.craftmal.de/job/CloudNotify/lastSuccessfulBuild/artifact/target/CloudNotify.jar)
  
- ## Setup
+ ## Wiki
  See the [Wiki](https://github.com/TimoCloud/CloudNotify/wiki)
 
  ## Building from source
