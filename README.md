@@ -2,7 +2,7 @@
 CloudNotify is an extension of the TimoCloud system. The CloudNotify BungeeCord plugin sends a message to all players with a certain permission when a server starts or stops.
  
  ## Download
- You can download the latest version [here](https://jenkins.craftmal.de/job/CloudNotify/lastSuccessfulBuild/artifact/target/CloudNotify.jar)
+ You can download the latest version [here](https://ci.craftgroup.de/job/CloudNotify/lastSuccessfulBuild/artifact/target/CloudNotify.jar)
  
  ## Wiki
  See the [Wiki](https://github.com/TimoCloud/CloudNotify/wiki)
