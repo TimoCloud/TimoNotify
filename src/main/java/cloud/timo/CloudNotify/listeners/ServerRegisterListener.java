@@ -4,11 +4,8 @@ import cloud.timo.CloudNotify.utils.NotifyType;
 import cloud.timo.TimoCloud.api.TimoCloudAPI;
 import cloud.timo.TimoCloud.api.events.EventHandler;
 import cloud.timo.TimoCloud.api.events.Listener;
-import cloud.timo.TimoCloud.api.events.ServerRegisterEvent;
 import cloud.timo.CloudNotify.CloudNotify;
-import cloud.timo.CloudNotify.managers.MessageManager;
-import net.md_5.bungee.api.ChatColor;
-import net.md_5.bungee.api.ProxyServer;
+import cloud.timo.TimoCloud.api.events.server.ServerRegisterEvent;
 
 public class ServerRegisterListener implements Listener {
 
@@ -18,7 +15,7 @@ public class ServerRegisterListener implements Listener {
 
     @EventHandler
     public void onServerRegister(ServerRegisterEvent event) {
-        CloudNotify.getInstance().getHelper().notify(NotifyType.REGISTER, event.getServerObject());
+        CloudNotify.getInstance().getHelper().notify(NotifyType.REGISTER, event.getServer());
     }
 
 }

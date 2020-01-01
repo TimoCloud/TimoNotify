@@ -21,7 +21,7 @@ public class Helper {
         }
         MessageManager.sendMessageToTeam(ChatColor.translateAlternateColorCodes('&', mainMessage
                 .replace("{serverName}", serverObject.getName())
-                .replace("{serverBase}", serverObject.getBase())
+                .replace("{serverBase}", serverObject.getBase().getName())
                 .replace("{serverExtra}", serverObject.getExtra())
                 .replace("{serverMap}", serverObject.getMap())
                 .replace("{serverMOTD}", serverObject.getMotd())
