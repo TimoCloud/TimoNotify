@@ -1,24 +1,22 @@
 package cloud.timo.CloudNotify.utils;
 
 import cloud.timo.CloudNotify.CloudNotify;
+import cloud.timo.CloudNotify.managers.FileManager;
 import cloud.timo.CloudNotify.managers.MessageManager;
 import cloud.timo.TimoCloud.api.objects.PlayerObject;
 import cloud.timo.TimoCloud.api.objects.ServerObject;
 import net.md_5.bungee.api.ChatColor;
 
-
 public class Helper {
 
     public void notify(NotifyType notifyType, ServerObject serverObject) {
-        String mainMessage = "";
-        if (notifyType == NotifyType.REGISTER)
-            mainMessage = CloudNotify.getInstance().getFileManager().getMessages().getString("serverRegisterMessage");
-        if (notifyType == NotifyType.UNREGISTER)
-            mainMessage = CloudNotify.getInstance().getFileManager().getMessages().getString("serverUnregisterMessage");
+        FileManager fileManager = CloudNotify.getInstance().getFileManager();
+        String mainMessage = (notifyType == NotifyType.REGISTER) ? fileManager.getMessages().getString("serverRegisterMessage") : fileManager.getMessages().getString("serverUnregisterMessage");
+
         String onlinePlayers = "";
-        for (PlayerObject onlinePlayer : serverObject.getOnlinePlayers()) {
+        for (PlayerObject onlinePlayer : serverObject.getOnlinePlayers())
             onlinePlayers = onlinePlayers + onlinePlayer.getName() + ", ";
-        }
+
         MessageManager.sendMessageToTeam(ChatColor.translateAlternateColorCodes('&', mainMessage
                 .replace("{serverName}", serverObject.getName())
                 .replace("{serverBase}", serverObject.getBase().getName())
