@@ -68,4 +68,5 @@ public class CloudNotify extends Plugin {
     public void setPrefix(String prefix) {
         this.prefix = prefix;
     }
+
 }

@@ -8,9 +8,9 @@ public class MessageManager {
 
     public static void sendMessageToTeam(String message) {
         ProxyServer.getInstance().getPlayers().forEach(proxiedPlayer -> {
-            if (proxiedPlayer.hasPermission("cloudnotify.notify")) {
+            if (proxiedPlayer.hasPermission("cloudnotify.notify"))
                 proxiedPlayer.sendMessage(new TextComponent(CloudNotify.getInstance().getPrefix() + message));
-            }
         });
     }
+
 }
