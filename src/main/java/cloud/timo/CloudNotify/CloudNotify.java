@@ -1,8 +1,11 @@
 package cloud.timo.CloudNotify;
 
+import cloud.timo.CloudNotify.commands.CloudNotifyCommand;
 import cloud.timo.CloudNotify.listeners.ServerRegisterListener;
 import cloud.timo.CloudNotify.listeners.ServerUnregisterListener;
+import cloud.timo.CloudNotify.managers.DatabaseManager;
 import cloud.timo.CloudNotify.managers.FileManager;
+import cloud.timo.CloudNotify.managers.PluginMessageManager;
 import cloud.timo.CloudNotify.utils.Helper;
 import net.md_5.bungee.api.ChatColor;
 import net.md_5.bungee.api.plugin.Plugin;
@@ -10,6 +13,9 @@ import net.md_5.bungee.api.plugin.Plugin;
 public class CloudNotify extends Plugin {
     private static CloudNotify instance;
     private FileManager fileManager;
+    private DatabaseManager databaseManager;
+    private CloudNotifyCommand cloudNotifyCommand;
+    private PluginMessageManager pluginMessageManager;
     private Helper helper;
     private String prefix;
 
@@ -23,8 +29,11 @@ public class CloudNotify extends Plugin {
     private void makeInstances() {
         setInstance(this);
         setFileManager(new FileManager());
+        setDatabaseManager(new DatabaseManager());
         setHelper(new Helper());
+        setPluginMessageManager(new PluginMessageManager());
         setPrefix(ChatColor.translateAlternateColorCodes('&', fileManager.getConfig().getString("Prefix") + " "));
+        setCloudNotifyCommand(new CloudNotifyCommand("cloudNotify", "cloudNotify.command.notify"));
     }
 
     @Override
@@ -69,4 +78,23 @@ public class CloudNotify extends Plugin {
         this.prefix = prefix;
     }
 
+    public DatabaseManager getDatabaseManager() {
+        return databaseManager;
+    }
+
+    public void setCloudNotifyCommand(CloudNotifyCommand cloudNotifyCommand) {
+        this.cloudNotifyCommand = cloudNotifyCommand;
+    }
+
+    public void setDatabaseManager(DatabaseManager databaseManager) {
+        this.databaseManager = databaseManager;
+    }
+
+    public PluginMessageManager getPluginMessageManager() {
+        return pluginMessageManager;
+    }
+
+    public void setPluginMessageManager(PluginMessageManager pluginMessageManager) {
+        this.pluginMessageManager = pluginMessageManager;
+    }
 }

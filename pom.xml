@@ -6,7 +6,7 @@
 
     <groupId>cloud.timo</groupId>
     <artifactId>CloudNotify</artifactId>
-    <version>3.0.0</version>
+    <version>3.0.1-beta</version>
     <build>
         <finalName>${project.name}</finalName>
         <resources>
@@ -54,11 +54,7 @@
         </repository>
     </repositories>
     <dependencies>
-        <dependency>
-            <groupId>cloud.timo.TimoCloud</groupId>
-            <artifactId>TimoCloud-API</artifactId>
-            <version>5.3.1</version>
-        </dependency>
+        <!--BungeeCordAPI-->
         <dependency>
             <groupId>net.md-5</groupId>
             <artifactId>bungeecord-api</artifactId>
@@ -73,6 +69,13 @@
             <systemPath>${project.basedir}/libs/TimoCloud.jar</systemPath>
             <scope>system</scope>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.6</version>
+        </dependency>
+
     </dependencies>
     
 </project>

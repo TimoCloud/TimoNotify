@@ -10,7 +10,7 @@ import java.nio.file.Files;
 
 public class FileManager {
     private String pluginsDirectory = "plugins/CloudNotify/";
-    private String configsDirectory = pluginsDirectory + "bungeecord/";
+    private String configsDirectory = pluginsDirectory;
     private File configFile;
     private Configuration config;
     private File messagesFile;
@@ -40,7 +40,7 @@ public class FileManager {
             config = ConfigurationProvider.getProvider(YamlConfiguration.class).load(configFile);
 
             //Load messagesFile
-            messagesFile = new File(configsDirectory, "config.yml");
+            messagesFile = new File(configsDirectory, "messages.yml");
             if (!messagesFile.exists()) {
                 messagesFile.createNewFile();
             }

@@ -1,2 +1,7 @@
-serverRegisterMessage: "&7The server &b{serverName}&7 has been successfully started.&7 (&7BASE:&b {serverBase},&7Extra:&b {serverExtra}, &7Map:&b {serverMap}, &7MOTD:&b {serverMOTD}, &7State:&b {serverState}, &7IP:&b {serverIpAddress}, &7MaxPlayerCount:&b {serverMaxPlayerCount}, &7PlayerCount:&b {serverOnlinePlayerCount}, &7OnlinePlayers:&b {serverOnlinePlayers}, &7Port:&b {serverPort}, &7SocketAddress:&b {serverSocketAddress}"
-serverUnregisterMessage: "&7The server &b{serverName}&7 has been successfully stopped.&7 (&7BASE:&b {serverBase},&7Extra:&b {serverExtra}, &7Map:&b {serverMap}, &7MOTD:&b {serverMOTD}, &7State:&b {serverState}, &7IP:&b {serverIpAddress}, &7MaxPlayerCount:&b {serverMaxPlayerCount}, &7PlayerCount:&b {serverOnlinePlayerCount}, &7OnlinePlayers:&b {serverOnlinePlayers}, &7Port:&b {serverPort}, &7SocketAddress:&b {serverSocketAddress}"
+serverRegisterMessage: "&7The server &b{serverName}&7 has been successfully started.&7 (&7BASE:&b {serverBase},&7Extra:&b {serverExtra}, &7Map:&b {serverMap}, &7MOTD:&b {serverMotd}, &7State:&b {serverState}, &7IP:&b {serverIpAddress}, &7MaxPlayerCount:&b {serverMaxPlayerCount}, &7PlayerCount:&b {serverOnlinePlayerCount}, &7OnlinePlayers:&b {serverOnlinePlayers}, &7Port:&b {serverPort}, &7SocketAddress:&b {serverSocketAddress}"
+serverUnregisterMessage: "&7The server &b{serverName}&7 has been successfully stopped.&7 (&7BASE:&b {serverBase},&7Extra:&b {serverExtra}, &7Map:&b {serverMap}, &7MOTD:&b {serverMotd}, &7State:&b {serverState}, &7IP:&b {serverIpAddress}, &7MaxPlayerCount:&b {serverMaxPlayerCount}, &7PlayerCount:&b {serverOnlinePlayerCount}, &7OnlinePlayers:&b {serverOnlinePlayers}, &7Port:&b {serverPort}, &7SocketAddress:&b {serverSocketAddress}"
+nobodyOnline: '&cNobody is online.'
+onlyPlayer: '&cOnly player can execute this command.'
+enabled: '&aenabled'
+disabled: '&cdisabled'
+changeStateCommand: '&7Your CloudNotify State has been {0}&7.'

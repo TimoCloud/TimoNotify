@@ -1,1 +1,8 @@
-Prefix: '&7[&bCloudNotify&b]&7'
+Prefix: '&8[&bCloudNotify&8]&7'
+MySQL:
+    useSSL: true
+    user: YourUser
+    password: YourSecretPassword
+    databaseName: YourDatabaseName
+    host: 0.0.0.0
+    port: 3306
