@@ -7,7 +7,7 @@ import cloud.timo.TimoCloud.api.messages.objects.AddressedPluginMessage;
 
 public class PluginMessageManager implements MessageListener {
 
-    public PluginMessageManager(){
+    public PluginMessageManager() {
         TimoCloudAPI.getMessageAPI().registerMessageListener(this::onPluginMessage, "CLOUDNOTIFY_NOTIFICATION");
     }
 
@@ -15,4 +15,5 @@ public class PluginMessageManager implements MessageListener {
     public void onPluginMessage(AddressedPluginMessage addressedPluginMessage) {
         CloudNotify.getInstance().getHelper().notify(addressedPluginMessage.getMessage());
     }
+
 }

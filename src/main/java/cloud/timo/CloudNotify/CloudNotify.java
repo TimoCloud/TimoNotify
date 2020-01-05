@@ -32,7 +32,7 @@ public class CloudNotify extends Plugin {
         setDatabaseManager(new DatabaseManager());
         setHelper(new Helper());
         setPluginMessageManager(new PluginMessageManager());
-        setPrefix(ChatColor.translateAlternateColorCodes('&', fileManager.getConfig().getString("Prefix") + " "));
+        setPrefix(ChatColor.translateAlternateColorCodes('&', fileManager.getConfig().getString("Prefix")));
         setCloudNotifyCommand(new CloudNotifyCommand("cloudNotify", "cloudNotify.command.notify"));
     }
 
@@ -97,4 +97,9 @@ public class CloudNotify extends Plugin {
     public void setPluginMessageManager(PluginMessageManager pluginMessageManager) {
         this.pluginMessageManager = pluginMessageManager;
     }
+
+    public CloudNotifyCommand getCloudNotifyCommand() {
+        return cloudNotifyCommand;
+    }
+
 }

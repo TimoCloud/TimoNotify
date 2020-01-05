@@ -1,4 +1,4 @@
-Prefix: '&8[&bCloudNotify&8]&7'
+Prefix: '&8[&bCloudNotify&8]&7 '
 MySQL:
     useSSL: true
     user: YourUser
